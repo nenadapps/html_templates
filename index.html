@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link href="css/jquery-ui.css"  type="text/css" rel="stylesheet"  />
+        <link href="css/rating.css" type="text/css" rel="stylesheet" />
+        <link href="css/keepa_search.css" type="text/css" rel="stylesheet" />
+        <link href="css/styleguide.css" type="text/css" rel="stylesheet" />
+        <link href="css/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+<div id="walmart_calc_popup"><div id="wrapper"> 
+    <div id="topbar">
+        <div class="left_box1 left_box" id="sellify_logo_box"> 
+            <a href="https://sellify.app" target="_blank"><img id="sellify_logo" src="popup/logo.svg"></a>
+        </div>  
+        <div class="center_box1">  
+            <div id="topbar_buttons">
+                <a href="https://www.amazon.com/s?k=Honeywell%20Black%20Turbo%20Force%20Power%20Table%20Fan%2C%20New%2C%206.3%22%20L%20x%208.94%22%20W%20x%20%2010.9%22%20H%2C%20HPF820BWM" id="amazon_link" target="_blank" title="Search Amazon"><img src="popup/amazon.svg"></a> 
+                <a href="https://www.ebay.com/sch/i.html?_nkw=Honeywell%20Black%20Turbo%20Force%20Power%20Table%20Fan%2C%20New%2C%206.3%22%20L%20x%208.94%22%20W%20x%20%2010.9%22%20H%2C%20HPF820BWM" id="ebay_link" target="_blank" title="Search eBay"><img src="popup/ebay.svg"></a> 
+                <a href="https://www.google.com/search?q=Honeywell%20Black%20Turbo%20Force%20Power%20Table%20Fan%2C%20New%2C%206.3%22%20L%20x%208.94%22%20W%20x%20%2010.9%22%20H%2C%20HPF820BWM" id="google_link" target="_blank" title="Search Google"><img src="popup/google.svg"></a> 
+                <a href="" id="settings_link" target="_blank" title="Settings"><img src="popup/settings.svg"></a> 
+                <a href="" id="report_bug_link" class="topbar_last_link" target="_blank" title="Report a bug"><img src="popup/report_bug.svg"></a> 
+            </div>
+        </div>    
+        <div class="right_box1 right_box">  
+            <div id="wcp_close_box">
+                <img id="wcp_close" src="popup/close1.svg">
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div class="left_box2 left_box" id="image_box"> 
+        <img src="https://i5.walmartimages.com/seo/Honeywell-Black-Turbo-Force-Power-Table-Fan-New-6-3-L-x-8-94-W-x-10-9-H-HPF820BWM_e748c278-1f2c-41ab-836c-5d928c425d6b.659aae6ac6bb26f79776a6ec3a57d8cc.jpeg" id="image">
+    </div>
+    <div class="right_box2 right_box">  
+        <div id="title_box">
+            <h3 id="title">Honeywell Black Turbo Force Power Table Fan, New, 6.3" L x 8.94" W x  10.9" H, HPF820BWM</h3>
+            <input type="hidden" id="full_title" value="Honeywell Black Turbo Force Power Table Fan, New, 6.3&quot; L x 8.94&quot; W x  10.9&quot; H, HPF820BWM" autocomplete="off">
+        </div>
+        <div id="upc_code_alerts_box">
+            <div class="uca_item">
+                <div id="item_code_wrapper"><div id="item_code_box">Item ID: <span id="item_code">607094187</span></div></div>
+                <div id="reviews_rating_box"> 
+                    <span>Rating</span>
+                    <span id="rating" title="4.5"><i data-star="4.5"></i></span>
+                    <span id="reviews"><a href="https://www.walmart.com/reviews/product/607094187?sort=submission-desc" target="_blank">6214</a></span>
+                </div>
+            </div>
+            <div class="uca_item">
+                <div id="upc_box">UPC: <span id="upc">328785003963</span></div>
+                <div id="offer_count_box">
+                    <label>Offer Count </label>
+                    <span id="total_sellers">1</span>
+                    <a href="https://seller.walmart.com/item/add-items?search=607094187" id="item_code_link" title="Add item to catalog" target="_blank"><img src="popup/plus_sign.svg"></a>
+                </div>
+            </div>
+            <div class="uca_item uca_item_last">
+                <div id="alert_box">
+                    <span>Alerts</span>
+                    <div id="alerts_box_icons"><img src="popup/variation_alert.svg" title="The listing has 2 variations"><img id="walmart_on_listing" src="popup/walmart_on_listing.svg" title="Walmart.com is on the listing"><a class="keepa_related_alert" href="https://www.amazon.com/dp/B093X632QL" target="_blank"><img src="popup/keepa_dna.svg" title="Pulling package information from B093X632QL via amazon.com"></a><img id="less_than_alert" class="seller_related_alert" src="popup/less_than_alert.svg" title="3 or less sellers"></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div style="clear:both;" class="divider"></div>
+    <div id="popup_box1">
+        <div id="cost_box" class="popup_box1_item"> 
+            <label id="cost_label">Cost</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <input type="text" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px" id="cost" autocomplete="off" value="8.99">
+        </div>    
+        <div id="profit_box" class="profit_box popup_box1_item">  
+            <label>Profit</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <span id="profit" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px" style="background-color: rgb(233, 245, 223);">9.19</span> 
+        </div>    
+        <div id="profit_margin_box" class="mrb_item profit_box popup_box1_item"> 
+            <label>Profit Margin</label>
+            <span id="profit_margin" class="poppins-semi-bold-eerie-black-12px" style="background-color: rgb(233, 245, 223);">30.65 %</span> 
+        </div>    
+        <div id="min_box" class="mrb_item popup_box1_item">  
+            <label>MIN</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <span id="min_price" class="min_price dollar_currency_element_after poppins-semi-bold-eerie-black-12px">16.88</span>    
+        </div>
+        <div id="sales_box" class="popup_box1_item">  
+            <label>Sale Price</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <input type="text" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px" id="sale_price" autocomplete="off" value="29.99">      
+        </div>
+        <div id="roi_box" class="mrb_item popup_box1_item">  
+            <label>ROI</label>
+            <span id="roi" class="poppins-semi-bold-eerie-black-12px" style="background-color: rgb(233, 245, 223);">102.23 %</span> 
+        </div>
+        <div id="breakeven_box" class="mrb_item popup_box1_item">  
+            <label>Break Even</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <span id="breakeven" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px">19.25</span>  
+        </div>
+        <div id="tf_box" class="mrb_item popup_box1_item">  
+            <label>Total Fees</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <span id="tf" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px">11.81</span>  
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="popup_box2">
+        <div id="lwhw_box">
+            <div id="lwh_box">
+                <input type="text" id="length" placeholder="L" autocomplete="off" style="border: 1px solid silver;" value="11.22">
+                <span class="unit_value">in</span>
+                <img src="popup/close1.svg">
+                <input type="text" id="width" placeholder="W" autocomplete="off" style="border: 1px solid silver;" value="10.94">
+                <span class="unit_value">in</span>
+                <img src="popup/close1.svg">
+                <input type="text" id="height" placeholder="H" autocomplete="off" style="border: 1px solid silver;" value="6.77">
+                <span class="unit_value">in</span>
+            </div>
+            <div id="weigth_box">
+                <input type="text" id="weight" placeholder="Weight" autocomplete="off" style="border: 1px solid silver;" value="3.70">
+                <span class="unit_value">lbs</span>
+            </div>
+        </div>
+        <div id="popup_box2_right">
+            <div id="search_keepa_box">
+                <img id="search_keepa" src="popup/search_keepa.svg" title="Search similar products">
+            </div>
+            <div id="reload_box">
+                <img id="reload_btn" src="popup/reload.svg" title="Reset dimensions &amp; weight">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

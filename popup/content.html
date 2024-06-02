@@ -1,0 +1,435 @@
+<div id="wrapper"> 
+    <div id="topbar">
+        <div class="left_box1 left_box" id="sellify_logo_box"> 
+            <a href="https://sellify.app" target="_blank"><img id="sellify_logo" src="popup/logo.svg"  /></a>
+        </div>  
+        <div class="center_box1">  
+            <div id="topbar_buttons">
+                <a href="" id="amazon_link" target="_blank" title="Search Amazon"><img src="popup/amazon.svg" /></a> 
+                <a href="" id="ebay_link" target="_blank" title="Search eBay"><img src="popup/ebay.svg" /></a> 
+                <a href="" id="google_link" target="_blank" title="Search Google"><img src="popup/google.svg" /></a> 
+                <a href="" id="settings_link" target="_blank" title="Settings"><img src="popup/settings.svg" /></a> 
+                <a href="" id="report_bug_link" class="topbar_last_link" target="_blank" title="Report a bug"><img src="popup/report_bug.svg" /></a> 
+            </div>
+        </div>    
+        <div class="right_box1 right_box">  
+            <div id="wcp_close_box">
+                <img id="wcp_close" src="popup/close1.svg" />
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div class="left_box2 left_box" id="image_box"> 
+        <img src="" id="image" />
+    </div>
+    <div class="right_box2 right_box">  
+        <div id="title_box">
+            <h3 id="title"></h3>
+            <input type="hidden" id="full_title" />
+        </div>
+        <div id="upc_code_alerts_box">
+            <div class="uca_item">
+                <div id="item_code_wrapper"><div id="item_code_box" >Item ID: <span id="item_code"></span></div></div>
+                <div id="reviews_rating_box"> 
+                    <span>Rating</span>
+                    <span id="rating"><i data-star=""></i></span>
+                    <span id="reviews"><a href="" target="_blank"></a></span>
+                </div>
+            </div>
+            <div class="uca_item">
+                <div id="upc_box">UPC: <span id="upc"></span></div>
+                <div id="offer_count_box">
+                    <label>Offer Count </label>
+                    <span id="total_sellers">&nbsp;</span>
+                    <a href="" id="item_code_link" title="Add item to catalog" target="_blank"><img src="popup/plus_sign.svg" /></a>
+                </div>
+            </div>
+            <div class="uca_item uca_item_last">
+                <div id="alert_box">
+                    <span>Alerts</span>
+                    <div id="alerts_box_icons" ></div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div style="clear:both;" class="divider"></div>
+    <div id="popup_box1">
+        <div id="cost_box" class="popup_box1_item"> 
+            <label id="cost_label">Cost</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <input type="text" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px" id="cost" />
+        </div>    
+        <div id="profit_box" class="profit_box popup_box1_item">  
+            <label>Profit</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <span id="profit" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px">&nbsp;</span> 
+        </div>    
+        <div id="profit_margin_box"  class="mrb_item profit_box popup_box1_item"> 
+            <label>Profit Margin</label>
+            <span id="profit_margin" class="poppins-semi-bold-eerie-black-12px">&nbsp;</span> 
+        </div>    
+        <div id="min_box" class="mrb_item popup_box1_item" >  
+            <label>MIN</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <span id="min_price" class="min_price dollar_currency_element_after poppins-semi-bold-eerie-black-12px" >&nbsp;</span>    
+        </div>
+        <div id="sales_box" class="popup_box1_item">  
+            <label>Sale Price</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <input type="text" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px" id="sale_price"  />      
+        </div>
+        <div id="roi_box" class="mrb_item popup_box1_item">  
+            <label>ROI</label>
+            <span id="roi" class="poppins-semi-bold-eerie-black-12px">&nbsp;</span> 
+        </div>
+        <div id="breakeven_box" class="mrb_item popup_box1_item" >  
+            <label>Break Even</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <span id="breakeven" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px">&nbsp;</span>  
+        </div>
+        <div id="tf_box" class="mrb_item popup_box1_item" >  
+            <label>Total Fees</label>
+            <div class="dollar_currency_left poppins-normal-eerie-black-12px">$</div>
+            <span id="tf" class="dollar_currency_element_after poppins-semi-bold-eerie-black-12px">&nbsp;</span>  
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="popup_box2">
+        <div id="lwhw_box">
+            <div id="lwh_box">
+                <input type="text" id="length" placeholder="L" />
+                <span class="unit_value">in</span>
+                <img src="popup/close1.svg" />
+                <input type="text" id="width" placeholder="W" />
+                <span class="unit_value">in</span>
+                <img src="popup/close1.svg" />
+                <input type="text" id="height" placeholder="H" />
+                <span class="unit_value">in</span>
+            </div>
+            <div id="weigth_box">
+                <input type="text" id="weight" placeholder="Weight" />
+                <span class="unit_value">lbs</span>
+            </div>
+        </div>
+        <div id="popup_box2_right">
+            <div id="search_keepa_box">
+                <img id="search_keepa" src="popup/search_keepa.svg" title="Search similar products" />
+            </div>
+            <div id="reload_box">
+                <img id="reload_btn" src="popup/reload.svg" title="Reset dimensions & weight" />
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="checkboxes_box">
+        <div id="hazardous_materials_box" class="float_left" title="$0.50 fee">
+            <input type="checkbox" id="hazardous_materials" />
+            <label>Hazardous</label>
+        </div>
+        <div id="wfs_polybag_box" class="float_left" title="$0.60 fee">
+            <input type="checkbox" id="wfs_polybag" />
+            <label>WFS Polybag</label>
+        </div>
+        <div id="standard_label_box" class="float_left" title="$0.45 fee">
+            <input type="checkbox" id="standard_label" />
+            <label>Standard Label</label>
+        </div>
+        <div class="float_left">&nbsp;</div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="oh_st_is_mfn_box">
+        <div id="oh_box" class="oh_st_is_mfn_item">
+            <label>OH</label>
+            <label class="switch">                 
+                <input type="checkbox" id="oh_slider">
+                <span class="slider round"></span>
+            </label>
+            <input type="text" id="oh" placeholder="Overhead" />  
+        </div>
+        <div id="sales_tax_box" class="oh_st_is_mfn_item">
+            <label>ST</label>
+            <label class="switch">                 
+                <input type="checkbox" id="st_slider">
+                <span class="slider round"></span>
+            </label>
+            <input type="text" id="tax" placeholder="Sales Tax %" />
+        </div>
+        <div id="inbound_shipping_box" class="oh_st_is_mfn_item">
+            <label>IS</label>
+            <label class="switch">                 
+                <input type="checkbox" id="is_slider" >
+                <span class="slider round" title="Shipping rate per pound from you to Walmart"></span>
+            </label>
+            <input type="text" id="inbound_shipping" placeholder="Inbound Shipping $/lb" />
+        </div>
+        <div id="mfn_box" class="oh_st_is_mfn_item">
+            <label>MFN</label>
+            <label class="switch">                 
+                <input type="checkbox" id="mfn_slider">
+                <span class="slider round" title="Merchant fulfilled"></span>
+            </label>
+            <input type="text" id="mfn_shipping" readonly="readonly" placeholder="Shipping Cost" />
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="fees_box" >
+        <div id="slider_total_fees_box">
+            <div id="slider_box" class="float_left">
+                <div id="slider_box_1">
+                    <label id="storage_fee_label" class="poppins-medium-eerie-black-12px">Storage Months</label>
+                    <div id="storage_fee_months_box"><input type="number" min="0" max="12" id="storage_fee_months" maxlength="2" class="poppins-normal-fuscous-gray-12px" /><span id="storage_fee_text" class="poppins-normal-fuscous-gray-12px">mths</span></div>
+                </div>
+                <div id="storage_fee_slider"></div>
+            </div>
+            <div id="short_fees_box" class="float_left">
+                <div id="short_fees_right" class="float_left">
+                    <label class="poppins-medium-eerie-black-12px">Total Fees</label>
+                    <div style="clear:both;" class="divider"></div>
+                    <span class="poppins-semi-bold-eerie-black-16px total_fees">&nbsp;</span>
+                </div>
+                <img src="" id="fee_breakdown_dd" class="float_left" />
+            </div>    
+        </div>
+        <div id="extended_fees_box" class="fees_dd_item" >
+            <div id="common_sizing_box"  title= "Display % of revenue">
+                <label>Common Sizing</label>
+                <label class="switch" >                 
+                    <input type="checkbox" id="common_sizing_slider">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="extended_fees_item main_fee_item">
+                <label>WFS Fee</label>
+                <img src="" id="wfs_dd" class="up_down" />
+                <span class="common_sizing"></span>
+                <span id="wfs_fees" class="fee_value main_fee_span">&nbsp;</span>
+            </div>
+            <div id="wfs_extended_box" class="fees_dd_item" >
+                <div class="extended_fees_item">
+                    <label>Standard WFS Fee</label>
+                    <span id="standard_wfs_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Oversize Fee</label>
+                    <span id="oversize_fees" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Big & Bulky Fee</label>
+                    <span id="big_bulky_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+            </div>
+            <div class="extended_fees_item main_fee_item">
+                <label>Referral Fee</label>
+                <img src="" id="refferal_dd" class="up_down" />
+                <span class="common_sizing"></span>
+                <span id="referral_fee" class="fee_value main_fee_span" >&nbsp;</span>
+                <input type="hidden" id="referral_fee_rule" />
+            </div>
+            <div id="refferal_extended_box" class="fees_dd_item" >
+                <div class="extended_fees_item">
+                    <label>Category</label>
+                    <span id="category">&nbsp;</span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Subcategory</label>
+                    <span id="product_type">&nbsp;</span>
+                </div>
+            </div>
+            <div class="extended_fees_item main_fee_item">
+                <label>Storage Fee</label>
+                <img src="" id="storage_dd" class="up_down" />
+                <span class="common_sizing"></span>
+                <span id="final_storage_fee" class="fee_value">&nbsp;</span>
+            </div>
+            <div id="storage_extended_box" class="fees_dd_item" >
+                <div class="extended_fees_item">
+                    <label>Non Peak-Season Storage Fee</label>
+                    <span id="no_peak_storage_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Peak-Season Storage Fee</label>
+                    <span id="peak_storage_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+            </div>
+            <div class="extended_fees_item main_fee_item">
+                <label>Additional Fees</label>
+                <img src="" id="additional_dd" class="up_down" />
+                <span class="common_sizing"></span>
+                <span id="additional_wfs_fees" class="fee_value main_fee_span">&nbsp;</span>
+            </div>
+            <div id="additonal_extended_box" class="fees_dd_item" >
+                <div class="extended_fees_item">
+                    <label>Inbound Shipping Fee</label>
+                    <span id="inbound_shipping_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>MFN Fee</label>
+                    <span id="mfn_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Apparel Surcharge</label>
+                    <span id="apparel_surcharge" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Sale Price <$10 Surcharge</label>
+                    <span id="price_less_10_surcharge" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Hazardous Surcharge</label>
+                    <span id="hazardous_materials_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>WFS Polybag Surcharge</label>
+                    <span id="wfs_polybag_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Standard Label Surcharge</label>
+                    <span id="standard_label_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Overhead</label>
+                    <span id="oh_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+                <div class="extended_fees_item">
+                    <label>Sales Tax</label>
+                    <span id="st_fee" class="fee_value">&nbsp;</span>
+                    <span class="common_sizing"></span>
+                </div>
+            </div>
+            <div id="total_fees_box" class="extended_fees_item">
+                <label>Total Fees</label>
+                <span class="total_fees">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="product_details_box">
+        <h4 class="poppins-semi-bold-eerie-black-16px" id="product_details_headline">Product Details<img src="" id="product_details_toggle" class="product_details_up_down" /></h4>
+        <div id="product_details_items">
+            <div class="product_details_row">
+                <input type="hidden" id="hidden_seller_name" />
+                <div class="product_details_item" id="mpn_box">
+                    <label class="poppins-normal-fuscous-gray-12px">Manufacturer Part #</label>
+                    <span id="manufacturer_part_number" class="poppins-semi-bold-eerie-black-14px" title="">&nbsp;</span>
+                </div>
+                <div class="product_details_item">
+                    <label class="poppins-normal-fuscous-gray-12px">Brand</label>
+                    <a href="" target="_blank"><span id="brand" class="product_details_short poppins-semi-bold-eerie-black-14px">&nbsp;</span></a>
+                </div>
+                <div class="product_details_item">
+                    <label class="poppins-normal-fuscous-gray-12px">Buy Box Seller QTY</label>
+                    <span id="buy_box_seller_qty" class="poppins-semi-bold-eerie-black-14px">&nbsp;</span>
+                </div>
+                <div class="product_details_item">
+                    <label class="poppins-normal-fuscous-gray-12px">Variation</label>
+                    <span id="variation_name" class="product_details_short poppins-semi-bold-eerie-black-14px">&nbsp;</span>
+                </div>
+            </div>
+            <div class="product_details_row">
+                <div class="product_details_item" id="model_box">
+                    <label class="poppins-normal-fuscous-gray-12px">Model #</label>
+                    <span id="model" title="" class="poppins-semi-bold-eerie-black-14px">&nbsp;</span>
+                </div>
+                <div class="product_details_item">
+                    <label class="poppins-normal-fuscous-gray-12px">Manufacturer</label>
+                    <a href="" target="_blank"><span id="manufacturer" class="product_details_short poppins-semi-bold-eerie-black-14px">&nbsp;</span></a>
+                </div>
+                <div class="product_details_item">
+                    <label class="poppins-normal-fuscous-gray-12px"># of Variants</label>
+                    <span id="total_variants" class="poppins-semi-bold-eerie-black-14px">&nbsp;</span>
+                </div>
+                <div class="product_details_item">
+                    <label class="poppins-normal-fuscous-gray-12px">Buy Box Suppression</label>
+                    <span id="buy_box_suppression" class="poppins-semi-bold-eerie-black-14px">&nbsp;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="order_profit_box">
+        <div class="order_profit_item">
+            <label>Units Purchased</label>
+            <input type="number" id="order_quantity" class="poppins-semi-bold-eerie-black-14px" value="1" min="1" />
+        </div>
+        <div class="order_profit_item">
+            <label>Revenue</label>
+            <span id="order_revenue"  class="poppins-semi-bold-eerie-black-14px"></span>
+        </div>
+        <div class="order_profit_item">
+            <label>Cost</label>
+            <span id="order_cost"  class="poppins-semi-bold-eerie-black-14px"></span>
+        </div>
+        <div class="order_profit_item">
+            <label>Profit</label>
+            <span id="order_profit"  class="poppins-semi-bold-eerie-black-14px"></span>
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="popup_box3">
+        <h4 class="poppins-semi-bold-eerie-black-16px" >Offer Count</h4>
+        <div id="offer_count_items">
+            <div class="popup_box3_item"> 
+                <label id="offer_count_label" class="poppins-normal-fuscous-gray-12px" title="Total sellers" >OC</label>
+                <span id="offer_count" class="poppins-semi-bold-eerie-black-14px" title="Total sellers"></span>
+            </div>
+            <div class="popup_box3_item">
+                <label  class="poppins-normal-fuscous-gray-12px">MFN</label>
+                <span id="total_mfn" class="poppins-semi-bold-eerie-black-14px"></span>
+            </div>
+            <div class="popup_box3_item">
+                <label  class="poppins-normal-fuscous-gray-12px">WFS</label>
+                <span id="total_wfs" class="poppins-semi-bold-eerie-black-14px"></span>
+            </div>
+            <div class="popup_box3_item">
+                <label  class="poppins-normal-fuscous-gray-12px">WMT</label>
+                <span id="total_wlmt" class="poppins-semi-bold-eerie-black-14px"></span>
+            </div>
+            <div class="popup_box3_item">
+                <label  class="poppins-normal-fuscous-gray-12px">MIN</label>
+                <span id="seller_min_price" class="min_price poppins-semi-bold-eerie-black-14px"></span>
+            </div>
+            <div class="popup_box3_item" >
+                <label  class="poppins-normal-fuscous-gray-12px">MAX</label>
+                <span id="seller_max_price" class="poppins-semi-bold-eerie-black-14px"></span>
+            </div>
+            <div class="popup_box3_item">
+                <label  class="poppins-normal-fuscous-gray-12px">BB</label>
+                <span id="seller_bb"  class="poppins-semi-bold-eerie-black-14px"></span>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="sellers_box">
+        <div class="seller_item2 seller_item_headings poppins-medium-eerie-black-12px">
+            <div class="seller_item_cell2 seller_col1">No.</div>
+            <div class="seller_item_cell2 seller_col2">Seller Name</div>
+            <div class="seller_item_cell2 seller_col3">QTY</div>
+            <div class="seller_item_cell2">Price</div>
+            <div class="seller_item_cell2">Profit</div>
+            <div class="seller_item_cell2">ROI %</div>
+            <div class="seller_item_cell2 profit_margin_col">Profit Margin</div>
+        </div>
+        <div id="sellers_box_items"></div>            
+    </div>
+</div>
+<div id="keepa_search_wrapper">
+    <div id="keepa_search_top">
+        <h6 class="poppins-normal-eerie-black-14px">Dimensions are in inches and pounds</h6>
+        <div id="keepa_search_close_box"><img src="popup/close1.svg" id="keepa_search_close" /></div>
+    </div>
+    <div style="clear:both;" class="divider"></div>
+    <div id="keepa_search_items"></div>
+</div>

@@ -1,0 +1,1346 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url(https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+#walmart_calc_popup {
+    width:550px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#walmart_calc_popup * {
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+}
+
+#wrapper {
+    height:fit-content;
+    max-height: 400px;
+    background-color: var(--white);
+    border-radius: 16px;
+    box-shadow: 0px 4px 40px #6785d826;
+    font-size: 12px;
+    cursor: pointer;
+    padding:10px;
+}
+
+#walmart_calc_popup input {
+    margin:5px 0px;
+    padding:3px;
+}
+
+#image {
+    width:fit-content;
+    background-blend-mode: multiply;
+    height: 78px;
+    object-fit: cover;
+}
+
+#image_box {
+    text-align: center;
+}
+
+/* checkbox slider */
+#walmart_calc_popup .switch {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 45px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+#walmart_calc_popup .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+#walmart_calc_popup .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--solitude);
+    border:1px solid #000000;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#walmart_calc_popup .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #000000;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#walmart_calc_popup input:checked + .slider {
+    background-color: var(--science-blue);
+}
+
+#walmart_calc_popup input:focus + .slider {
+    box-shadow: 0 0 1px var(--science-blue);
+}
+
+#walmart_calc_popup input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+#walmart_calc_popup .slider.round {
+    border-radius: 34px;
+}
+
+#walmart_calc_popup .slider.round:before {
+    border-radius: 50%;
+}
+
+#walmart_calc_popup .left_box {
+    float:left;
+}
+
+#walmart_calc_popup .right_box {
+    float:left;
+}
+
+#walmart_calc_popup .left_box1 {
+    width:30%;
+}
+
+#walmart_calc_popup .center_box1 {
+    width:50%;
+}
+
+#walmart_calc_popup .right_box1 {
+    width:20%;
+    margin-right: 0px;
+}
+
+#walmart_calc_popup .left_box2 {
+    width:20%;
+    margin-right: 2%;
+    text-align: center;
+}
+
+#walmart_calc_popup .right_box2 {
+    width:78%;
+    height:135px;
+}
+
+#walmart_calc_popup .left_box7  {
+    width:30%;
+    text-align: center;
+    height:120px;
+}
+
+#walmart_calc_popup .right_box7  {
+    width:66%;
+    margin-left: 10px;
+    height:120px;
+}
+
+#walmart_calc_popup .left_box2_1 {
+    width:30%;
+    text-align: center;
+    border:2px solid #000000;
+    padding:2px;
+    margin-top: 5px;
+}
+
+#walmart_calc_popup .right_box2_1 {
+    width:66%;
+    border:2px solid #000000;
+    padding:2px 3px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#walmart_calc_popup .left_box3, #walmart_calc_popup .left_box5, #walmart_calc_popup .left_box6 {
+    width:49%;
+}
+
+#walmart_calc_popup .right_box3, #walmart_calc_popup .right_box5, #walmart_calc_popup .right_box6 {
+    width:49%;
+}
+
+#walmart_calc_popup .left_box3 input, #walmart_calc_popup .right_box3 input {
+    width:60%;
+    margin-left:7px;
+    border:2px solid #000000;
+}
+
+#walmart_calc_popup .left_box4 {
+    width:65%;
+}
+
+#walmart_calc_popup .right_box4 {
+    width:33%;
+}
+
+#topbar .right_box {
+    margin-right: 7px;
+}
+
+#walmart_calc_popup .right_box7_item,
+#walmart_calc_popup .rounded_corners {
+    border-radius: 5px;
+    border: 1px solid silver;
+}
+
+.extended_fees_item * {
+    border-radius: 12px;
+    border: 1px solid #E4EBF1;
+}
+
+.extended_fees_item img {
+    border:none;
+}
+
+#popup_box1, #popup_box2, #slider_total_fees_box, #extended_fees_box,.fees_dd_item, #image_box, #product_details_box {
+    border-radius: 12px;
+}
+
+#popup_box1, #popup_box2, #slider_total_fees_box, #extended_fees_box, #image_box, #product_details_box {
+    background-color: var(--solitude);
+}
+
+.fees_dd_item {
+    background-color: #E2F0FC;
+    border:1px solid #CCDCEA;
+}
+
+#slider_total_fees_box {
+    height:65px;
+    padding:2%;
+}
+
+#popup_box2 {
+    height: 58px;
+}
+
+#popup_box1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding:5px 5px 5px 0px;
+    height:fit-content;
+    min-height: 115px;
+}
+
+#upc_code_alerts_box * {
+    color: var(--fuscous-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.popup_box1_item {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2%;
+    position: relative;
+}
+
+.dollar_currency_left {
+    position: absolute;
+    left:41%;
+    color:darkgray;
+}
+
+#walmart_calc_popup .percent_right {
+    right:2%;
+    color: darkgray;
+    position:absolute;
+}
+
+#breakeven_box .dollar_currency_left {
+    left:44%;
+}
+
+#popup_box1 .dollar_currency_element_after {
+    padding-left:8%;
+    text-align: right;
+}
+
+.popup_box1_item label {
+    text-align: right;
+    color: var(--fuscous-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+}
+
+.popup_box1_item input, .popup_box1_item span, #offer_count_box, #reviews_rating_box, #image_box, #sellers_box .seller_item2 .seller_item_cell2, #slider_total_fees_box  {
+    display: flex;
+    align-items: center;
+}
+
+#image_box {
+    justify-content: center;
+}
+
+#popup_box1 .popup_box1_item input, #popup_box1 .popup_box1_item span {
+    justify-content: flex-end;
+    padding-right: 8%;
+}
+
+#popup_box1 .popup_box1_item #roi, #popup_box1 .popup_box1_item #profit_margin {
+    justify-content: center;
+    padding-right: 0%;
+}
+
+#offer_count_box, #reviews_rating_box, #sellers_box .seller_item2 .seller_item_cell2  {
+    justify-content: flex-start;
+}
+
+#upc_code_alerts_box  {
+    content: "";
+    display: table;
+    clear: both;
+    position: relative;
+}
+
+#walmart_calc_popup .uca_item {
+    float: left;
+    width: 34%;
+    margin-right: 1%;
+}
+
+#walmart_calc_popup .uca_item_last {
+    width:27%;
+}
+
+#popup_box1 label {
+    width:33%;
+}
+
+#popup_box1 input, #popup_box1 span {
+    border: 1px solid;
+    border-color: var(--mystic);
+    border-radius: 12px;
+    height: 42px;
+    float:right;
+    width:63%;
+    margin-left:2%;
+    background-color: #FFFFFF;
+    text-align: right;
+}
+
+#total_sellers {
+    padding:1% 3%;
+    display: block;
+    float:left;
+    margin-left:2%;
+    color: var(--eerie-black);
+    font-weight: 600;
+}
+
+#offer_count_box label {
+    float:left;
+}
+
+#alert_offer_count_box, #upc_code_box, #reviews_rating_box {
+    font-size: 1em;
+    height: fit-content;
+}
+
+#walmart_calc_popup .f3f8f9_background {
+    background-color: #F3F8F9;
+}
+
+#weigth_box label {
+    padding:1px 2px;
+}
+
+#walmart_calc_popup #lwh_box input {
+    width:24%;
+    margin:0 3px 0 3%;
+}
+
+#walmart_calc_popup #lwh_box span {
+    width:8%;
+    text-align: center;
+    font-size:1em;
+}
+
+#walmart_calc_popup #lwh_box * {
+    float:left;
+}
+
+#walmart_calc_popup #lwh_box, #walmart_calc_popup #weigth_box {
+    float:left;
+}
+
+#walmart_calc_popup #lwh_box {
+    width:65%;
+}
+
+#walmart_calc_popup #weigth_box {
+    margin-left:4%;
+    width:30%;
+}
+
+#weight {
+    width:70%;
+}
+
+#walmart_calc_popup .divider {
+    height:10px;
+    display: block;
+}
+
+#walmart_calc_popup .left_box4 label {
+    width:30px;
+}
+
+#walmart_calc_popup .left_box4 input {
+    width:40px;
+}
+
+#walmart_calc_popup .right_box4 input {
+    width:40%;
+    float:right;
+    margin-right:20px;
+}
+
+#category {
+    width:95%;
+}
+
+#rating {
+    margin:0 3%;
+}
+
+#reviews {
+    margin-right: 15%;
+}
+
+#reviews a {
+    text-decoration:none;
+    color:#000000;
+}
+
+#cost_calculation_fields {
+    border:2px dotted #000000;
+    padding:10px;
+    background-color: #f3f8f9;
+}
+
+#cost_calculation_fields {
+    display: block;
+    height:100px;
+}
+
+#cost_calculation_fields input {
+    padding:5px;
+}
+
+#title {
+    color: var(--eerie-black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l);
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+
+#walmart_calc_popup .right_box2 p {
+    margin-left: 15px;
+    padding-top:15px;
+}
+
+#topbar {
+    padding:4px 10px 4px 0px;
+}
+
+#walmart_calc_popup #topbar_buttons {
+    align-items: center;
+    background-color: #ebf4fc;
+    border-radius: 12px;
+    display: flex;
+    gap: 21px;
+    height: 42px;
+    padding: 0 12px;
+    pointer-events: auto;
+    width:80%;
+    float:left;
+}
+
+#topbar_buttons img {
+    height: 18px;
+    width: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+#walmart_calc_popup .right_box2_1 label {
+    padding-left:10px;
+}
+
+#oh_st_is_mfn_box, #checkboxes_box, #order_profit_box, #offer_count_items, #sellers_box .seller_item2, #checkboxes_box .float_left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#checkboxes_box .float_left {
+    width:25%;
+}
+
+#checkboxes_box label {
+    margin-left:5px;
+}
+
+#walmart_calc_popup .popup_box3_item {
+    width:14%;
+    margin-right: 1%;
+}
+
+#walmart_calc_popup .popup_box3_item span {
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid #E4EBF1;
+    border-radius: 12px;
+    display: flex;
+    letter-spacing: 0;
+    line-height: 22px;
+    white-space: nowrap;
+    padding:5px 0px 5px 5px;
+}
+
+.oh_st_is_mfn_item, .order_profit_item {
+    width:25%;
+}
+
+#walmart_calc_popup .oh_st_is_mfn_item [type=text],#walmart_calc_popup .order_profit_item input, #walmart_calc_popup .order_profit_item span, #walmart_calc_popup #inbound_shipping {
+    width:90% !important;
+    border:none;
+    border: 1px solid;
+    border-color: var(--mystic);
+    border-radius: 12px;
+    display: flex;
+    height: 42px;
+    padding: 9px 11px;
+    text-align: center;
+}
+
+#walmart_calc_popup .oh_st_is_mfn_item [type=text], #walmart_calc_popup #inbound_shipping {
+    padding: 9px 8px;
+}
+
+#slider_box_1, #checkboxes_box {
+    width:100%;
+}
+
+#storage_fee_label {
+    float:left;
+    width:45%;
+}
+
+#storage_fee_months_box {
+    float:left;
+    width:35%;
+}
+
+#storage_fee_slider {
+    width:90%;
+    margin-bottom: 5px;
+    margin-top:8px;
+}
+
+#slider_box {
+    width:60%;
+    align-items: center;
+}
+
+#slider_box_left {
+    width:75%;
+}
+
+#slider_box_right {
+    width:25%;
+    display:flex;
+    padding-top:16px;
+    text-align: left;
+}
+
+.float_left {
+    float:left;
+}
+
+.width49 {
+    width:49%;
+}
+
+#cb_slider_left {
+    font-size: 0.65em;
+    background-color: #CCCCCC;
+    padding:2%;
+}
+
+#cb_slider_left label {
+    margin-left: 2%;
+}
+
+#walmart_calc_popup #inbound_shipping {
+    min-width: 20px;
+    width:100%;
+    margin:3px 0px;
+}
+
+#short_fees_box {
+    width:40%;
+    padding: 2%;
+    height:35px;
+}
+
+#short_fees_right {
+    width:60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#short_fees_right label {
+    margin-right: 5px;
+}
+
+#short_fees_right p {
+    text-align: right;
+    font-size: 1.2em;
+    width:100%;
+}
+
+#total_fees {
+    padding:3px;
+    margin-left:5px;
+}
+
+#wfs_extended_box, #extended_fees_box, #refferal_extended_box, #storage_extended_box, #additonal_extended_box {
+    width:100%;
+    margin:2% auto;
+    padding:2%;
+    display: none;
+}
+
+#extended_fees_box {
+    position:relative;
+    padding:3.5% 2%;
+}
+
+#walmart_calc_popup .extended_fees_item  {
+    margin:3% 0;
+}
+
+#walmart_calc_popup .extended_fees_item span {
+    width:30%;
+}
+
+#walmart_calc_popup .extended_fees_item label, #walmart_calc_popup .extended_fees_item select {
+    width:47%;
+}
+
+#walmart_calc_popup .main_fee_item span {
+    width:43%;
+}
+
+#walmart_calc_popup .main_fee_item label {
+    width:60%;
+}
+
+#walmart_calc_popup .extended_fees_item label,  #walmart_calc_popup .extended_fees_item span, #walmart_calc_popup .extended_fees_item select {
+    float:left;
+    padding:2%;
+    background-color: #FFFFFF;
+}
+
+#walmart_calc_popup .extended_fees_item label {
+    margin-right: 3%;
+}
+
+#walmart_calc_popup .extended_fees_item span {
+    display: block;
+}
+
+#walmart_calc_popup .extended_fees_item span.common_sizing {
+    background-color: transparent;
+    width: 20%;
+    margin:0% 2% 0% 0%;
+    border:none;
+    display: none;
+}
+
+#walmart_calc_popup .main_fee_item span.common_sizing {
+    width:10%;
+}
+
+#unit_volume, #storage_multiplier {
+    width:100px;
+}
+
+#page_overlay {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:999;
+    background-color: #000000;
+}
+
+#page_overlay p {
+    position: fixed;
+    left:40%;
+    width:20%;
+    text-align: center;
+    top:300px;
+    color:#FFFFFF;
+    font-size:26px;
+    font-weight: bold;
+}
+
+#sellers_box {
+    display: table;
+    background-color: var(--solitude);
+    width: 100%;
+    border-radius: 12px;
+    overflow-y: scroll;
+    height: fit-content;
+}
+
+#topbar, #upc_code_box, #sellers_box .seller_item1, #walmart_calc_popup .left_box7,
+#sellers_box .seller_item1, #lwhw_box,
+#walmart_calc_popup #lwh_box *, #walmart_calc_popup .right_box7, #walmart_calc_popup .flex_centered,
+#walmart_calc_popup .extended_fees_item, #slider_box_1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#weigth {
+    width:100%;
+}
+
+#walmart_calc_popup #lwhw_box input {
+    background-color: var(--white);
+    border-radius: 12px;
+    height: 42px;
+    border:none;
+    text-align: center;
+}
+
+#lwhw_box, #popup_box2_right {
+    float:left;
+}
+
+#lwhw_box {
+    width:80%;
+}
+
+#popup_box2_right {
+    width:18%;
+}
+
+#sellers_box .seller_item1, #sellers_box .seller_item2 {
+    width: 100%;
+    clear: both;
+    border-bottom: 1px solid lightgray;
+}
+
+#sellers_box .seller_item2 .seller_item_cell2 {
+    padding:5px;
+    float: left; /* fix for  buggy browsers */
+    text-align: left;
+    height:44px;
+    width:13%;
+}
+
+#sellers_box .seller_item2 .seller_col2 {
+    width:34%;
+}
+
+#sellers_box .seller_item2 .seller_col3 {
+    width:10%;
+}
+
+.seller_category {
+    text-transform:uppercase;
+    display: block;
+}
+
+#sellers_box .seller_item2 .seller_col1 {
+    width:8%;
+}
+
+#sellers_box .seller_item2:last-child {
+    border-bottom: none;
+}
+
+/*
+#sellers_box .seller_item_headings {
+    position: -webkit-sticky;
+    position: sticky;
+    top: -10px;
+}*/
+
+#sellers_box .seller_item2 .profit_margin_col {
+    text-wrap: wrap;
+}
+
+#sellers_box .seller_item1 {
+    border:1px solid #000000;
+    margin-top:10px;
+    background-color: #e6e6e6;
+}
+
+#sellers_box .seller_item1 .seller_item_cell1 {
+    padding:2px;
+    border: none;
+}
+
+#sellers_box .seller_number {
+    width:8%;
+}
+
+#sellers_box #sellers_box_items .seller_item2 .seller_name_cell, #slider_box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#sellers_box .seller_item2 .seller_name_cell a {
+    text-decoration: none;
+    display: block;
+    width:100%;
+    max-width: 140px;
+}
+
+#walmart_calc_popup .left_box7, #walmart_calc_popup .right_box7 {
+    color:#000000;
+    height:50px;
+    text-align: center;
+}
+
+#walmart_calc_popup #order_quantity_box {
+    float:left;
+    padding:1%;
+    height:90px;
+}
+
+#walmart_calc_popup #offer_count_items {
+    width:100%;
+    padding:1%;
+}
+
+#walmart_calc_popup .product_details_item {
+    width:25%;
+    float:left;
+    padding:1%;
+    min-height: 40px;
+}
+
+#walmart_calc_popup .product_details_item * {
+    width: 100%;
+    display: block;
+}
+
+#walmart_calc_popup .product_details_row {
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+#walmart_calc_popup .product_details_row label {
+    font-size:0.7em;
+}
+
+#walmart_calc_popup .product_details_row span {
+    font-weight: bold;
+}
+
+#product_details_box {
+    flex-wrap: wrap;
+    padding:3%;
+    position:relative;
+    height: 60px;
+}
+
+#product_details_box * {
+    text-align: left;
+}
+
+#product_details_items {
+    display: none;
+}
+
+#product_details_toggle {
+    float:right;
+}
+
+#product_details_headline {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+#offer_count_headline {
+    width:100%;
+}
+
+#walmart_calc_popup #product_details_box h4 {
+    padding:1%;
+}
+
+#walmart_calc_popup .left_box7 {
+    padding:1%;
+}
+
+#walmart_calc_popup .right_box7 span {
+    padding:5px;
+}
+
+#walmart_calc_popup .right_box7_item {
+    float:left;
+    width:30%;
+    text-align: left;
+    border:1px solid #000000;
+    margin-left:2%;
+    padding:2px;
+}
+
+.seller_name_cell img {
+    width:15px;
+    vertical-align: middle;
+}
+
+#sellers_box .mfn .seller_item_cell2, #walmart_calc_popup .popup_box3_item .mfn_cell {
+    background-color: #F8FBFF;
+}
+
+#sellers_box .wlmt .seller_item_cell2, #walmart_calc_popup .popup_box3_item .wlmt_cell {
+    background-color: #D0E2F1;
+}
+
+#sellers_box .wfs .seller_item_cell2, #walmart_calc_popup .popup_box3_item .wfs_cell {
+    background-color: #DCEEFF;
+}
+
+#sellers_box .seller_item_headings .seller_item_cell2 {
+    color: var(--eerie-black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 500;
+}
+
+#sellers_box .buy_box_indicator {
+    width:12px;
+}
+
+#sellers_box .seller_number {
+    display: block;
+    width:100%;
+}
+
+#sellers_box .seller_item2 .seller_col1 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#sellers_box .seller_col1 img {
+    margin:0px auto;
+}
+
+#sellers_box .seller_item2 .cell2_first {
+    width:8%;
+    border:none;
+    background-color: #DAD3D3;
+    margin-left: 3%;
+}
+
+#walmart_calc_popup #sellers_box .seller_item_bold .seller_item_cell2, #walmart_calc_popup #sellers_box .seller_item_bold .seller_item_cell2 * {
+    color: var(--eerie-black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 600;
+}
+
+
+#walmart_calc_popup #sellers_box .seller_item_bold .seller_item_cell2 .seller_category {
+    color:#0171DC;
+}
+
+#walmart_calc_popup #short_fees_right img, #walmart_calc_popup .extended_fees_item .up_down {
+    width:20px;
+}
+
+#walmart_calc_popup .extended_fees_item .up_down {
+    margin-right: 2%;
+}
+
+#walmart_calc_popup #alert_offer_count_box label {
+    float:left;
+    display: block;
+    margin: 3%;
+}
+
+#walmart_calc_popup #alert_box label {
+    width:20%;
+}
+
+#alerts_box_icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    float:left;
+    width: 80%;
+    height:60px;
+    min-width: 120px;
+}
+
+#alerts_box_icons img {
+    margin-right: 6px;
+    margin-bottom: 3px;
+    padding:6px;
+    border:1px solid var(--mystic);
+    border-radius: 10px;
+    width:28px;
+}
+
+#alerts_box_icons * {
+    height:28px;
+}
+
+#walmart_calc_popup .copied_message {
+    position:absolute;
+    background-color:#ECF2F8;
+    color:#000000;
+    padding:3px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 1px 2px 3px;
+}
+
+#walmart_calc_popup .copied_message1 {
+    bottom:0px;
+    right:0px;
+}
+
+#walmart_calc_popup #common_sizing_box {
+    position:absolute;
+    width:130px;
+}
+
+#walmart_calc_popup .copied_message2, #walmart_calc_popup #common_sizing_box {
+    top:5px;
+    right:5px;
+}
+
+#walmart_calc_popup #no_reviews {
+    text-align: left;
+    width: 100%;
+    display: block;
+}
+
+.ui-tooltip {
+    background-color: #F4F3F3;
+    color: #545454;
+    border-color:  #D7DEE4;
+    padding: 5px;
+    text-align:center;
+    border-radius: 5px;
+    box-shadow: none;
+    left: 50%;
+    font-size: var(--font-size-m);
+    min-width: 40px;
+}
+.ui-tooltip-content {
+    position: relative;
+}
+.ui-tooltip-content::after, .ui-tooltip-content::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    display: block;
+    width: 0;
+    height: 0;
+    bottom: -15px;
+    left: calc((100% - 10px) / 2);
+    margin-left: -5px;
+}
+
+.ui-tooltip-content::before {
+    border-color: #9f9e9d transparent;
+    border-width: 10px 10px 0;
+}
+
+.ui-tooltip-content::after {
+    bottom: -14.3px;
+    border-color: #F4F3F3 transparent;
+    border-width: 10px 10px 0;
+    margin-left: -5.1px;
+}
+
+#walmart_calc_popup .product_details_item a {
+    text-decoration: none;
+    cursor:pointer;
+    color:#000000;
+}
+
+#storage_fee_months {
+    width:35px;
+    border:none;
+    text-align: right;
+    background-color: transparent;
+}
+
+.yellow_border {
+    border:2px solid #F8DD81 !important;
+}
+
+#walmart_calc_popup .sellify {
+    color: var(--eerie-black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxl);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+#sellify_logo {
+    align-self: flex-end;
+    height: 23px;
+    margin-bottom: 0;
+}
+
+#sellify_logo_box {
+    align-items: flex-start;
+    display: flex;
+    gap: 6px;
+    height: 22px;
+    min-width: 93px;
+}
+
+#popup_box2, #popup_box2_right, #lwhw_box, #lwh_box, #short_fees_box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#walmart_calc_popup  #popup_box2_right img {
+    margin-right: 2%;
+}
+
+#image_box {
+    height: 110px;
+}
+
+#wcp_close_box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    float:right;
+    height: 42px;
+}
+
+#reload_box, #search_keepa_box {
+    position: relative;
+    background-color: var(--science-blue);
+    border-radius: 12px;
+    height: 42px;
+    min-width: 42px;
+    padding: 0 10px;
+}
+
+#search_keepa_box {
+    display: none;
+}
+
+#reload_box {
+    margin-left:5px;
+    margin-right:5px;
+}
+
+#search_keepa, #reload_btn {
+    width:50%;
+    position: absolute;
+    top: 25%;
+    bottom: 25%;
+}
+
+#reload_btn {
+    margin-right: 5px;
+}
+
+#walmart_calc_popup .ui-slider-handle {
+    background-color: var(--science-blue);
+    border-radius: 7px;
+    height: 14px;
+    width: 14px;
+}
+
+#walmart_calc_popup .ui-widget-content {
+    background-color: var(--science-blue);
+    border-radius: 60px;
+    height: 6px;
+}
+
+#walmart_calc_popup .ui-slider-range {
+    background-color: var(--white);
+}
+
+#mfn_shipping, #oh, #tax, #inbound_shipping {
+    background-color: #EBE9E9;
+}
+
+#mfn_shipping {
+    color: #CCCCCC;
+}
+
+#sellers_box * {
+    color: var(--fuscous-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m);
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* custom scroll style */
+/* width */
+#walmart_calc_popup ::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+#walmart_calc_popup ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+#walmart_calc_popup ::-webkit-scrollbar-thumb {
+    background: #0171DC;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+#walmart_calc_popup ::-webkit-scrollbar-thumb:hover {
+    background: #0055A0;
+}
+
+#walmart_calc_popup ::-webkit-scrollbar-thumb:active {
+    background: #0C4475;
+}
+
+.sellify_truncate_text {
+    white-space: nowrap; /* Prevents the text from wrapping to the next line */
+    overflow: hidden;    /* Hide the overflow */
+    text-overflow: ellipsis; /* Render an ellipsis ("...") to represent clipped text */
+}
+
+#walmart_calc_popup input[readonly=readonly] {
+    border: none;
+}
+
+#walmart_calc_popup input[readonly=readonly]:focus-visible{
+    outline: none;
+}
+
+#walmart_calc_popup input[readonly=readonly]::placeholder {
+    color: #CCCCCC;
+}
+
+#title, #title_box {
+    height: 55px;
+}
+
+#title {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 18px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow:hidden;
+    white-space: normal;
+}
+
+#reviews_rating_box, #offer_count_box, #upc_code_alerts_box {
+    margin-top: 10px;
+}
+
+#walmart_calc_popup .seller_name_cell .pro_seller_icon {
+    margin-left: 5px;
+}
+
+#item_code_link {
+    margin-left:10%;
+    float:left;
+}
+
+#item_code_link img {
+    width:12px;
+}
+
+.unit_value {
+    color:darkgrey;
+}
